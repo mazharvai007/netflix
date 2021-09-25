@@ -1,7 +1,7 @@
 import axios from '../../axios';
 import React, { useEffect, useState } from 'react';
 
-const base_url = 'https://image.tmdb.org/t/p/original';
+const base_url = 'https://image.tmdb.org/t/p/original/';
 
 function Row({ title, fetchURL, isLargeRow }) {
 	const [movies, setMovies] = useState([]);
@@ -15,17 +15,17 @@ function Row({ title, fetchURL, isLargeRow }) {
 		fetchData();
 	}, [fetchURL]);
 
-	console.table(movies);
-
 	return (
 		<div className='row'>
 			<div className='row__heading p-4'>
-				<h2 className='text-left font-bold font-sans'>{title}</h2>
+				<h2 className='text-left font-bold font-sans text-white'>
+					{title}
+				</h2>
 			</div>
-			<div className='row__items flex space-x-2 overflow-x-scroll overflow-scroll-none p-4'>
+			<div className='row__items flex space-x-4 overflow-x-scroll overflow-scroll-none p-4'>
 				{movies.map((movie) => (
 					<div
-						className='item flex-shrink-0 flex-grow-0 w-1/6'
+						className='item w-1/6 flex-shrink-0 flex-grow-0'
 						key={movie.id}>
 						<img
 							className='transition duration-500 transform hover:scale-105'
@@ -36,7 +36,11 @@ function Row({ title, fetchURL, isLargeRow }) {
 							}`}
 							alt={movie.name}
 						/>
-						<span className='mt-2 block'>{movie.name}</span>
+						<span className='mt-2 block text-white'>
+							{movie?.name ||
+								movie?.title ||
+								movie?.original_name}
+						</span>
 					</div>
 				))}
 			</div>
