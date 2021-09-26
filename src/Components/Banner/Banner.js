@@ -34,7 +34,7 @@ function Banner() {
 
 	return (
 		<header
-			className='banner h-96 object-contain'
+			className='banner h-96 object-contain relative'
 			style={{
 				backgroundSize: 'cover',
 				backgroundImage: `url("${base_url}${movie?.backdrop_path}")`,
