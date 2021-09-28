@@ -39,7 +39,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
+    "movie-trailer": "^2.1.0",
     "postcss": "^7.0.36",
+    "react-youtube": "^7.13.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.14"
   }
 }
