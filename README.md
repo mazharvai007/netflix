@@ -1,9 +1,7 @@
-# What we do
+# Netflix Clone
 
--   Get TMDB API key - Done
--   Setup firebase hosting - Done
--   Get all the movies
--   Build the rows
--   Build the banner
--   Build the navbar
--   Add trailer pop-ups
+## [Live Demo](https://netflix-clone-66145.web.app/)
+
+### Description
+
+This is react JS Netflix clone simple project
